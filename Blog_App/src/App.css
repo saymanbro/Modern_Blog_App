@@ -1,0 +1,307 @@
+/* for navbar  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+/* for home container */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans&family=Roboto&display=swap');
+/* for latest_blog_post  */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+html,body
+{
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px !important;
+    overflow-x: hidden; 
+}
+/* Navbar Style */
+.icons{
+    width: 50px;
+}
+.navbar-nav .nav-item .nav-link{
+    color: #f87f14;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-right: 10px;
+  
+}
+
+/* Home page Style */
+.header_container{
+    background-image: url('./image/note.jpg');;
+    background-size:cover;
+    background-position: center;
+    width:  100vw;
+    height: 70vh;
+
+    
+}
+.header_text{
+    color: #fff;
+        width: 50vw;
+        min-width:30vw;
+        margin-left: 100px;
+        padding-top: 150px;
+        font-family: 'Montserrat', sans-serif;  
+}
+
+.header_text h1{
+    font-size: 45px;
+    font-weight: bold;
+}
+.blogBtn{
+    color: #fff;
+    background:transparent;
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    outline: none !important;
+    font-size: 14px;
+    transition: 350ms;
+    cursor: pointer;
+}
+.blogBtn:hover{
+    border-radius: 40px;
+}
+/* About Container*/
+.about_container{
+    width: 70vw;
+    height: 50vh;
+    text-align: center;
+    margin: 0  auto;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+   
+   
+}
+/* latest blog container style */
+.main_blog_container{
+    font-family: 'Montserrat', sans-serif;  
+}
+ .latest_blog_post{
+   
+    font-family: 'Nunito', sans-serif;
+    background: #f8f8f8; 
+
+} 
+.readBtn{
+    padding: 10px 60px;
+    background: transparent;
+    border: 1px solid rgb(48, 230, 48);
+    border-radius:40px;
+    cursor: pointer;
+    transition: 350ms;
+    outline: none !important;
+}
+.readBtn:hover{
+    background: rgb(115, 231, 115);
+}
+
+
+/* contact container */
+ .contact_container{
+    background: #3f51b5;
+    padding: 100px 0;
+ }
+ .contact_input input, textarea{
+     width:100%;
+     padding: 10px 5px;
+     background: transparent;
+     border-radius: 10px;
+     outline:none;
+     border: 1px solid #fff;
+     margin-bottom: 10px;
+     color: #fff;
+ }
+::placeholder{
+     color:rgba(13, 250, 25, 0.932);
+ }
+ .sendBtn{
+     padding: 10px 40px;    
+     border: 1px solid #fff;
+     outline: none !important;
+     cursor: pointer;
+     background: #fff;
+    border-radius:20px;
+    color: rgba(13, 250, 25, 0.932);
+    transition: all 0.4s ease-out;
+ }
+ .sendBtn:hover{
+     background: transparent;
+     border: 1px solid #fff;
+     color: #fff;
+ }
+
+/* Footer container */
+.footer_container{
+    background: #252020;
+    height: 50vh;
+}
+.letterInput{
+    width: 100%;
+    margin: 10px 0;
+    background : transparent;
+    outline:none !important;
+    color: #fff !important;
+}
+.footerBtn{
+    padding: 10px 40px;    
+    border: 1px solid #fff;
+    outline: none !important;
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+   border-radius:20px;
+   transition: all 0.4s ease-out;
+}
+.footerBtn:hover{
+    background: rgb(61, 233, 61)
+}
+.social_icons{
+    color: #fff;
+    margin: 10px 0 10px 15px;
+}
+.social_icons:hover{
+    color:rgb(61, 233, 61)
+}
+.footer_container span{
+    color: #777;
+}
+
+
+/* Style for blog Component */
+ 
+.blog_search{
+    width:80%;
+    padding: 5px;
+    background: #DCEFF0;
+    color: black;
+    outline: none !important;
+    border:none;
+    border-radius: 4px;
+}
+.search_btn{
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #777;
+    outline: none !important;
+    cursor: pointer;
+    padding: 2px;
+}
+.main_blog_container{
+    background:#f7f8fc;
+}
+.blog_img{
+    height: 0;
+    padding-top: '56.25%';
+    background-color: 'rgba(0, 0, 0, 0.5)';
+    background-blend-mode: 'darken';
+}
+.overlay{
+    position:absolute;
+    top: 20%;
+    left:20%;
+    color: #fff;
+}
+/* Style for about Component */
+.about_div_1{
+    background-color:#F4F7F7;
+    width:100vw;
+    padding: 50px 10px;
+}
+.about_div_2{
+    padding: 30px 20px;
+}
+/* style for author Section */
+.team_section{
+    background-color:#F4F7F7;
+    width: 100vw;
+    padding: 70px 0;
+}
+
+.team_icons:hover{
+    background: rgb(61, 233, 61);
+   border-radius: 20px;
+   cursor: pointer;
+}
+
+/* Contact Us  */
+.contactUs{
+    width: 100vw;
+    background: #F4F7F7;
+    height: 40vh;
+}
+.contact_text{
+    padding: 50px 0;
+
+}
+/* Login Style */
+.signin_container{
+    width: 50%;
+    height: 60%;
+    margin: 200px auto;
+    background: #F4F7F7;
+}
+.sign-container{
+    margin-top: 60px;
+    border: 1px solid black;
+    width:40%;
+    height: 300px;
+    text-align: center;
+    margin-left: 400px;
+
+}
+
+.sign-container button{
+    border: none;
+    padding:20px;
+    font-size: 17px;
+    margin: 20px;
+    border-radius: 13px;
+}
+.sign-container h1{
+    margin-top:40px;
+}
+
+/* Responsive style for various Devices */
+@media only screen and (max-width:769px){
+    .icons{
+        width: 35px;
+    }
+    .header_container{
+        height: 80%;
+    }
+    .header_text{
+        width: 70vw;
+        padding-top: 50px;
+        margin-left: 35px;
+    }
+    .about_container{
+        height: 55vh;
+        width: 90vw;
+        padding: 0 ;
+        font-size: 14px;
+    }
+    .latest_blog_container{
+        height: 1370px;
+      
+    }
+  
+    .latest_blog_post .card{
+        margin-bottom: 15px;
+    }
+    .contact_input{
+        margin-bottom: 20px;
+    }
+    .footer_container{
+        height: 100%;
+    }
+    .signinBtn{
+        margin-left:10px
+    }
+    
+
+    
+}
