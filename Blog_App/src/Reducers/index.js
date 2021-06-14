@@ -1,8 +1,8 @@
 
-import { AUTH, LOGOUT}   from '../Component/constant/index'
+import { AUTH, LOGOUT,FETCHBLOG}   from '../Component/constant/index'
 export const blogs =(blogs=[], action)=>{
         switch(action.type){
-            case "FETCH_BLOG" :
+            case FETCHBLOG :
                return action.payload;
     
             case "FETCH_BLOG_BY_SEARCH": 

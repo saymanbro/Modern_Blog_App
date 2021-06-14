@@ -8,7 +8,7 @@ export const getBlogs = () => async (dispatch) => {
   
         try{
             const {data} = await api.getBlogs();
-           
+          
             dispatch({type: FETCHBLOG, payload:data})
           
         }catch(err){

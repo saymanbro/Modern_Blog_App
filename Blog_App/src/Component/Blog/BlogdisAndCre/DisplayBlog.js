@@ -31,10 +31,11 @@ const history = useHistory()
   };
 
     return ( 
+   
         < div className='display_blog_container col-md-6 col-12 col-sm-6'>
       <Card className={classes.card} className='mt-md-0 my-md-2 mt-3 '>
       
-      <CardMedia className={classes.media} image={reverseBlog.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} />
+      <CardMedia className={classes.media} image={reverseBlog.selectedFile } />
       <div className={classes.overlay}>
         <Typography variant="h6">{reverseBlog.name}</Typography>
         <Typography variant="body2">{moment(reverseBlog.createdAt).fromNow()}</Typography>
@@ -65,7 +66,7 @@ const history = useHistory()
       </CardActions>
     </Card>
          
-          
+ 
         </div>
     );
 };

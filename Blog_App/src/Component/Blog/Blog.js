@@ -9,9 +9,9 @@ const Blog = () => {
    
     useEffect(() => {
        dispatch(getBlogs())
+      
+      })
 
-   
-      }, [ currentId ])
 
     return (
         <div className='main_blog_container'>

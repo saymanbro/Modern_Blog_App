@@ -21,16 +21,10 @@ const BlogHome = ({  setCurrentId, currentId}) => {
  const [ tags, setTags ]  = useState([]);
 const dispatch = useDispatch();
 
-
-// console.log(reverseBlog)
-
  const query = useQuery();
  const history = useHistory();
 
- const searchQuery = query.get('searchQuery');
-
 const reverseBlog = useSelector((state)=> state.blogs);
-
 const handleAdd = (tag) => setTags([ ...tags, tag])
 const handleDelete = (tagToDelete) => setTags(tags.filter((tag) => tag !== tagToDelete))
 
@@ -38,12 +32,14 @@ const handleDelete = (tagToDelete) => setTags(tags.filter((tag) => tag !== tagTo
 
 
 const searchBlog = () => {
-    if(search === '' || tags === "") history.push('/blog');
+    if(search === '' && tags === "") history.push('/blog');
     else if(search.trim() || tags){
          // dispatch => fetch search post 
          dispatch(getBlogBySearch({ search , tags: tags.join(',')}))
-         history.push(`/blog/search?searchQuery=${search || 'none' }&tags=${ tags.join(',')}`)
-     } if(search === '' || tags === "") history.push('/')
+         history.push(`/blog/search?searchQuery=${search || 'none' }&tags=${ tags.join(',')}`);
+         setSearch('');
+         setTags([])
+     } 
    
 }
 
@@ -62,21 +58,20 @@ const handleKeyPress = (e) => {
            
                             <div className="row "> 
                                         <div className="col-md-8 order-1 order-md-0 ">
-                                                <div className="row">
+                                                <div className="row">  
                                                { 
-                                                  reverseBlog.length === 0?
-                                                  <button className="btn btn-primary" type="button" disabled>
-                                                  <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                                                  Loading...
-                                                </button>
-                                                : (
+                                                 !reverseBlog.length ?
+                                                  <div className="d-flex justify-content-center">
+                                                         <div className="spinner-border" role="status">
+                                                             <span className="visually-hidden">Loading...</span>
+                                                         </div>
+                                                    </div>
+                                               : 
+                                                   ( 
                                                     reverseBlog.map((reverseBlog)=>(
                                                         <Display  setCurrentId={setCurrentId} key={reverseBlog._id} reverseBlog={reverseBlog} />
-                                                         ))
-                 
-                                                  )                
-                                                 
-                                                 }              
+                                                      )))    
+                                                 }                 
                                                 </div>
                                            
                                 </div>           

@@ -6,13 +6,12 @@ import cardimg2 from '../../image/blogimg2.jpg'
 import cardimg3 from '../../image/blogimg3.jpg';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
-import { useHistory } from 'react-router-dom';
+
 
 
 
 const Home = () => {
-  
-const history = useHistory();
+
 
   
     return (
@@ -23,7 +22,7 @@ const history = useHistory();
 
                           <h1> Welcome To Modern <br /> <span style={{color:'cyan'}} >Blog App :) </span> </h1>
                           <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi repudiandae impedit dolor blanditiis, consequuntur dolorem? </p>
-                         <button className="blogBtn" onClick={()=> history.push('/blog')}>Read Blog</button>  
+                         <button className="blogBtn" >Read Blog</button>  
 
                    </div>
                 </div>
