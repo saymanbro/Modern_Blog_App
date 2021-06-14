@@ -38,8 +38,8 @@ const user = JSON.parse(localStorage.getItem("profile"));
     if(!user){
         return(
             <div className="container border border-info rounded py-4">
-               <strong className="text-center d-block text-info ">
-                   Please singin to create your own memories with this app !!!
+               <strong className="text-center d-block text-danger ">
+                Hello budy, Signin to Like & create  your own memories with this app !!!
                </strong>
             </div>
         )

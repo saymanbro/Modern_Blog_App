@@ -10,7 +10,7 @@ const Blog = () => {
     useEffect(() => {
        dispatch(getBlogs())
       
-      })
+      },[])
 
 
     return (
